@@ -1,0 +1,14 @@
+        <p>TIPO DE USUARIO: {{user.usuario}}</p>
+        <p>NOMBRE COMPLETO: {{user.nombre}} {{user.erApellido}} {{user.doApellido}}</p>
+<div>
+    <div ng-if="user.usuario === 'paciente'"><a href="#!/infopaci/{{id}}" class="">Información del Paciente</a></div>
+    <div ng-if="user.usuario === 'profesional'"><a href="#!/infoprof/{{id}}" class="">Información del Profesional</a></div>
+
+    <div ng-if="user.usuario === 'paciente'"><a href="#!/editpaci/{{id}}" class="">Editar Paciente</a></div>
+    <div ng-if="user.usuario === 'profesional'"><a href="#!/editprof/{{id}}" class="">Editar Profesional</a></div>
+    
+    
+    <div><a href="#!/removeone/{{id}}" class="">Eliminar Usuario</a></div>
+</div>
+
+<!--  ng-if="user.usuario === 'paciente' || 'profesional'" -->

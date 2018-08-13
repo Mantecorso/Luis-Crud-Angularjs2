@@ -1,0 +1,25 @@
+{
+  "name": "crud-alfatec",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Luis Jurado Quesada"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Mantecorso/Luis-Crud-Angularjs2",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^4.1.3",
+    "jquery": "^3.3.1",
+    "angular": "^1.7.3",
+    "angular-route": "^1.7.3",
+    "popper.js": "^1.14.4"
+  }
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crud=Angular</title>
+
+    <link rel="stylesheet" href="./public/components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body ng-app="luisApp" ng-controller="appController">
+    <header>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-1">
+                    <a href="https://alfatecsistemas.es/" target="_blanck">
+                        <img src="./images/th.jpeg" class="logo2"></img>
+                    </a>
+                </div>
+                <div class="col-10 header2">
+                    <h1>Listado de Usuarios</h1>
+
+
+
+                    <button type="button" class="btn btn btn-success" data-toggle="modal" data-target="#crearUsuario">
+                        Crear Nuevo Usuario
+                    </button>
+
+                    <div class="modal fade" id="crearUsuario" tabindex="-1" role="dialog" aria-labelledby="crearUsuario" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">
+                                        Crear Nuevo Usuario
+                                    </h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    Que tipo de usuario quieres crear, paciente o profesional?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" value="paciente" ng-click="#!/crearpaci" class="btn btn-secondary">
+                                        Paciente
+                                    </button>
+                                    <button type="submit" value="profesional" ng-click="#!/crearprof" class="btn btn-primary">
+                                        Profesional
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn btn-danger" data-toggle="modal" data-target="#borrarMedicos">
+                        Borrar Medicos
+                    </button>
+
+                    <div class="modal fade" id="borrarMedicos" tabindex="-1" role="dialog" aria-labelledby="borrarMedicos" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">
+                                        Borrar Medicos
+                                    </h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    Advertencia, vas a borrar a todos los registros de profesionales medicos,
+                                    <br> ¿Estás seguro?.
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" value="deletemedi" ng-click="#!/removemedi" class="btn btn-secondary">
+                                        Si
+                                    </button>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">
+                                        No
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="col-1">
+                    <a href="https://mantecorso.github.io/LuisJuradoQ/" target="_blanck">
+                        <img src="./images/Luislogo.png" class="logo"></img>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    
+        <div ng-view></div>
+    
+
+    <footer>
+    
+        <div class= "container-fluid footer1">
+            <div class= "row">
+                <div class="col-1">
+                    <a href="#!/" class="btn btn-warning">Volver inicio</a>
+                </div>
+                <div class= "col-3">
+                    <h3>Create by Luis</h3>
+                </div>
+                <div class= "col-7"></div>
+                <div class= "col-1">
+                    <a href="https://mantecorso.github.io/LuisJuradoQ/" target="_blanck"><img src="./images/Luislogo.png" class="logo"></img></a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <script src="./public/components/angular/angular.min.js"></script>
+    <script src="./public/components/angular-route/angular-route.min.js"></script>
+    <script src="./public/components/jquery/dist/jquery.min.js"></script>
+    <script src="./public/components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./public/components/popper.js/dist/popper.min.js"></script>
+    <script src="main.js"></script>
+    <script src="./routes/app.js"></script>
+    <script src="./controller/controller.js"></script>
+    <script src="./factory/factory.js"></script>
+    <script src="windows.js"></script>
+</body>
+
+</html>

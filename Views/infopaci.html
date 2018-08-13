@@ -1,0 +1,46 @@
+<h1 class="subheader">Información del usuario: {{user.nombre}}</h1>
+
+
+<!-- Tab links -->
+<div class="tab">
+    <button class="tablinks" onclick="openUser(event, 'DatosPersonales')">Datos Personales</button>
+    <button class="tablinks" onclick="openUser(event, 'Direccion')">Dirección</button>
+    <button class="tablinks" onclick="openUser(event, 'ListadoAseguradoras')">Listado de Aseguradoras</button>
+</div>
+
+<!-- Tab content -->
+<div id="DatosPersonales" class="tabcontent">
+
+    <h3>Datos Personales</h3>
+
+    <p>NHC:{{user.NHC}}</p>
+    <p>Nombre: {{user.nombre}}</p>
+    <p>Primer Apellido: {{user.erApellido}}</p>
+    <p>Segundo Apellido: {{user.doApellido}}</p>
+    <p>Género: {{user.Genero}}</p>
+    <p>Fecha de Nacimiento: {{user.FechaDeNacimiento}}</p>
+    <p>NIF o Pasaporte: {{user.NIF}}</p>
+    <p>Telefono: {{user.Telefono}}</p>
+
+</div>
+
+<div id="Direccion" class="tabcontent">
+
+    <h3>Dirección</h3>
+
+    <p>Calle: {{user.Calle}}</p>
+    <p>Número: {{user.Numero}}</p>
+    <p>Puerta: {{user.Puerta}}</p>
+    <p>CP: {{user.Codigo_Postal}}</p>
+    <p>Ciudad: {{user.Ciudad}}</p>
+    <p>Provincia: {{user.Provincia}}</p>
+
+</div>
+
+<div id="ListadoAseguradoras" class="tabcontent">
+
+    <p>Nombre Aseguradora:{{user.NombreAseguradora}}</p>
+    <p>Tipo De Seguro:{{user.TipodeSeguro}}</p>
+    <p>Número De La Tarjeta:{{user.NumerodeTarjeta}}</p>
+
+</div>
