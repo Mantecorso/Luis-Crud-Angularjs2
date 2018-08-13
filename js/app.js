@@ -22,13 +22,13 @@ app.config(function ($routeProvider) {
 
         .when("/crearpaci", {
             title: 'Añadir paciente',
-            templateUrl: 'views/crearpaci.html',
+            templateUrl: './views/crearpaci.html',
             controller: 'crearPaciController'
         })
 
         .when("/crearprof", {
             title: 'Añadir nuevo profesional',
-            templateUrl: 'views/crearprof.html',
+            templateUrl: './views/crearprof.html',
             controller: 'crearProfController'
         })
 
