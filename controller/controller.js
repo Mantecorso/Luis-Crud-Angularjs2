@@ -30,7 +30,7 @@ app.controller("crearPaciController", function crearPaciController($scope, $loca
         window.localStorage.setItem('users', JSON.stringify(myJson));
         
 
-        $location.url("/");
+        $location.url("/data/");
     }
 });
 
@@ -48,7 +48,7 @@ app.controller("crearProfController", function crearProfController($scope, $loca
         window.localStorage.setItem('users', JSON.stringify(myJson));
         
 
-        $location.url("/");
+        $location.url("/data/");
     }
 });
 
@@ -65,7 +65,7 @@ app.controller("editPaciController", function editPaciController($scope, $routeP
         window.localStorage.setItem('users', JSON.stringify(myJson));
 
 
-        $location.url('/');
+        $location.url('/data/');
     }
 });
 
@@ -81,7 +81,7 @@ app.controller("editProfController", function editProfController($scope, $routeP
         window.localStorage.setItem('users', JSON.stringify(myJson));
 
 
-        $location.url('/');
+        $location.url('/data/');
     }
 });
 
@@ -94,7 +94,7 @@ app.controller("removeOneController", function removeOneController($scope, $rout
 
         window.localStorage.setItem('users', JSON.stringify(myJson));
 
-        $location.url('/');
+        $location.url('/data/');
     }
 });
 
@@ -107,6 +107,6 @@ app.controller("removeMediController", function removeMediController($scope, $ro
 
         window.localStorage.setItem('users', JSON.stringify(myJson));
 
-        $location.url('/');
+        $location.url('/data/');
     }
 });
