@@ -2,7 +2,7 @@ app.controller("appController", function appController($scope, AppService, $loca
     let response = AppService.getUsers()
 
     console.log(typeof (response.pacientes))
-    $scope.users = response.pacientes.concat(response.profesionales);
+    $scope.users = response.usuario;
 
 });
 
@@ -18,7 +18,7 @@ app.controller("infoProfController", function infoProfController($scope, $routeP
 
 app.controller("crearPaciController", function crearPaciController($scope, $location) {
     $scope.textButton = "Añadir nuevo paciente";
-    $scope.user = 'Paciente';
+    $scope.user = 'usuario.paciente';
 
 
 
@@ -26,11 +26,11 @@ app.controller("crearPaciController", function crearPaciController($scope, $loca
 
         console.log($scope.user);
         let myJson = JSON.parse(window.localStorage.getItem('users'));
-        myJson.pacientes.push($scope.usuario)
+        myJson.usuario.paciente.push($scope.user)
         window.localStorage.setItem('users', JSON.stringify(myJson));
         
 
-        $location.url("/data/");
+        $location.url("/data/user.json");
     }
 });
 
@@ -44,11 +44,11 @@ app.controller("crearProfController", function crearProfController($scope, $loca
 
        
         let myJson = JSON.parse(window.localStorage.getItem('users'));
-        myJson.profesionales.push($scope.user)
+        myJson.usuario.profesional.push($scope.user)
         window.localStorage.setItem('users', JSON.stringify(myJson));
         
 
-        $location.url("/data/");
+        $location.url("/data/user.json");
     }
 });
 
@@ -60,12 +60,12 @@ app.controller("editPaciController", function editPaciController($scope, $routeP
 
 
         let myJson = JSON.parse(window.localStorage.getItem('users'));
-        myJson.pacientes[$routeParams.id] = $scope.user;
+        myJson.usuario.paciente[$routeParams.id] = $scope.user;
 
         window.localStorage.setItem('users', JSON.stringify(myJson));
 
 
-        $location.url('/data/');
+        $location.url('/data/user.json');
     }
 });
 
@@ -76,12 +76,12 @@ app.controller("editProfController", function editProfController($scope, $routeP
 
 
         let myJson = JSON.parse(window.localStorage.getItem('users'));
-        myJson.profesionales[$routeParams.id] = $scope.user;
+        myJson.usuario.profesional[$routeParams.id] = $scope.user;
 
         window.localStorage.setItem('users', JSON.stringify(myJson));
 
 
-        $location.url('/data/');
+        $location.url('/data/user.json');
     }
 });
 
@@ -90,11 +90,11 @@ app.controller("removeOneController", function removeOneController($scope, $rout
     $scope.removeUser = function () {
 
         let myJson = JSON.parse(window.localStorage.getItem('users'));
-        myJson.usuarios.splice($routeParams.id, 1);
+        myJson.splice($routeParams.id, 1);
 
         window.localStorage.setItem('users', JSON.stringify(myJson));
 
-        $location.url('/data/');
+        $location.url('/data/user.json');
     }
 });
 
@@ -107,6 +107,6 @@ app.controller("removeMediController", function removeMediController($scope, $ro
 
         window.localStorage.setItem('users', JSON.stringify(myJson));
 
-        $location.url('/data/');
+        $location.url('/data/user.json');
     }
 });
