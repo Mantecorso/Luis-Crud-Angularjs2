@@ -1,4 +1,4 @@
-var app = angular.module('luisapp', ['ngRoute']);
+var app = angular.module('luisApp', ['ngRoute']);
 var myApp = angular.module('myApp', []);
 
 
@@ -6,51 +6,51 @@ var myApp = angular.module('myApp', []);
 app.config(function ($routeProvider) {
     $routeProvider
         .when("/", {
-            templateUrl: "views/inicio.html",
+            templateUrl: "Views/inicio.html",
             controller: 'appController'
         })
         .when("/infopaci/:id", {
-            templateUrl: 'views/infopaci.html',
+            templateUrl: 'Views/infopaci.html',
             controller: 'infoPaciController'
         })
 
 
         .when("/infoprof/:id", {
-            templateUrl: 'views/infoprof.html',
+            templateUrl: 'Views/infoprof.html',
             controller: 'infoProfController'
         })
 
         .when("/crearpaci", {
             title: 'Añadir paciente',
-            templateUrl: './views/crearpaci.html',
+            templateUrl: './Views/crearpaci.html',
             controller: 'crearPaciController'
         })
 
         .when("/crearprof", {
             title: 'Añadir nuevo profesional',
-            templateUrl: './views/crearprof.html',
+            templateUrl: './Views/crearprof.html',
             controller: 'crearProfController'
         })
 
         .when("/editpaci/:id", {
             title: 'Editar paciente',
-            templateUrl: 'views/editpaci.html',
+            templateUrl: 'Views/editpaci.html',
             controller: 'editPaciController'
         })
 
         .when("/editprof/:id", {
             title: 'Editar profesional',
-            templateUrl: 'views/editprof.html',
+            templateUrl: 'Views/editprof.html',
             controller: 'editProfController'
         })
         
         .when("/removeone/:id", {
             title: 'Eliminar usuario',
-            templateUrl: 'views/removeone.html',
+            templateUrl: 'Views/removeone.html',
             controller: 'removeOneController'
         })
         .when("/removemedi", {
-            templateUrl: "views/removemedi.html",
+            templateUrl: "Views/removemedi.html",
             controller: 'removeMediController'
         })
 
